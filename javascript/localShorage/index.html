@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body onload="setValue()">
+	<script type="text/javascript">
+		function input() {
+			localStorage.value = document.getElementById("theValue").value;
+			document.getElementById("showValue").innerHTML = localStorage.value;
+		}
+		function setValue() {
+			if (localStorage.value != null){
+				document.getElementById("showValue").innerHTML = localStorage.value;
+				document.getElementById("theValue").value = localStorage.value;
+			}
+		}
+	</script>
+<p id="showValue"></p>
+<input id="theValue" oninput="input()">
+</body>
+</html>
